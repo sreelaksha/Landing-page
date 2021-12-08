@@ -21,12 +21,17 @@ section {
 li {
     list-style: none;
     white-space: nowrap;
+    display: none;
 }
 
 a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
+}
+
+svg {
+    width: 1.5rem;
 }
 
 .navbar { 
@@ -55,6 +60,13 @@ a {
     justify-content: center;
 }   
 
+.top-shoe-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+
     @media(max-width: 1140px){
         .navbar {
             display: grid;
@@ -76,5 +88,52 @@ a {
             align-items: flex-start;
             justify-content: right;
             padding-right: 20px;
+        }  
+        .top-shoe-image {
+            position: absolute;
+            z-index: -1;
+            top:0;
+            left:0;
+            bottom: 0; 
+        }
+        .shoe-img {
+            width: 500px;
         }   
+    }
+    
+.nav_checkbox {
+    display: none;
+}
+
+.nav_toggle {
+    position: absolute;
+    cursor: pointer;
+    margin: 0rem 1rem;
+    right: 0;
+}
+
+.close {
+    display: none;
+}
+
+#nav_checkbox:checked ~ ul.navbar-menu li {
+    display: block;
+}
+
+#nav_checkbox:checked ~ label.nav_toggle .close {
+    display: block;
+}
+
+#nav_checkbox:checked ~ label.nav_toggle .burger_menu {
+    display: none;
+}
+    
+    @media only screen and (min-width: 560px) {
+        .nav_toggle {
+            display: none;
+        }
+    
+        li {
+            display: block;
+        }
     }
