@@ -33,12 +33,13 @@ a {
 svg {
     width: 1.5rem;
 }
-
+/** styling for navbar **/
 .navbar { 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+/** styling for navbar menu items**/
 .navbar-menu {
     display: flex;
     flex-direction: row;
@@ -52,6 +53,7 @@ svg {
     background: rgba(250,250,250,0.5);
 }
 
+/** styling for cart icon **/
 .cart-icon {
     display: flex;
     flex-direction: column;
@@ -59,6 +61,7 @@ svg {
     justify-content: center;
 }   
 
+/** styling for top shoe image to appear behind the navbar menu **/
 .top-shoe-image {
     position: absolute;
     z-index: -1;
@@ -66,6 +69,7 @@ svg {
     right: 0;
 }
 
+/** styling for input checkbox to hide **/
 .nav_checkbox {
     display: none;
 }
@@ -77,12 +81,14 @@ svg {
     right: 0;
 }
 
+/** styling for close svg **/
 .close {
     display: none;
     z-index: 100;
     position: relative;
 }
 
+/** styling for navbar items when checkbox is checked **/
 #nav_checkbox:checked ~ ul.navbar-menu li {
     display: block;
 }
@@ -105,15 +111,16 @@ svg {
     gap:4rem;
 }
 
+/** styling for menu svg and close svg when checkbox is checked **/
 #nav_checkbox:checked ~ label.nav_toggle .close {
     display: block;
 }
 
-
 #nav_checkbox:checked ~ label.nav_toggle .burger_menu {
     display: none;
 }
-    
+
+/** styling for heading, text content **/
 .content {
     padding: 4rem 0 0 4rem;
 }
@@ -133,6 +140,7 @@ svg {
     line-height: 1.6;
 }
 
+/** styling for icons,bottom shoe image,add to basket section **/
 .footer-wrapper {
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
@@ -185,6 +193,7 @@ svg {
     font-size: 30px;
 }
 
+/** adding responsive for mobile layout **/
 @media(max-width: 1024px){
     section {
         padding: 5%;
@@ -273,7 +282,7 @@ svg {
         width: auto;
     }
 }
-
+/** mobile layout for content heading and text **/
 @media(max-width: 768px){
     .content-heading{
         font-size: 30px;
@@ -293,7 +302,6 @@ svg {
     .nav_toggle {
         display: none;
     }
-
     li {
         display: block;
     }    
